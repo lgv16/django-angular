@@ -6,7 +6,11 @@ class CamaSerializer(serializers.ModelSerializer):
  
     class Meta:
         model = Cama
-        fields = ('id','codigo'
+        fields = ('id',
+                  'codigo'
                   'name',
-                  'age','enfermedad', 'estado','aislamiento',
+                  'age',
+                  'enfermedad',
+                  'estado',
+                  'aislamiento',
                   'active')
