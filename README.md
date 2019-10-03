@@ -29,3 +29,7 @@ class Camas(models.Model):
     estado = models.CharField(max_length=70, blank=False, default='')
     aislamiento = models.CharField(max_length=70, blank=False, default='')
     active = models.BooleanField(default=False)
+
+
+    user_test
+    Secret.123

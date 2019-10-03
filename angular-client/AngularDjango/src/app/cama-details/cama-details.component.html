@@ -1,0 +1,31 @@
+<div *ngIf="cama">
+    <div>
+      <label>Codigo: </label> {{cama.codigo}}
+    </div>
+    <div>
+      <label>Name: </label> {{cama.name}}
+    </div>
+    <div>
+      <label>Age: </label> {{cama.age}}
+    </div>
+    <div>
+      <label>Enfermedad: </label> {{cama.enfermedad}}
+    </div>
+    <div>
+      <label>Estado: </label> {{cama.estado}}
+    </div>
+    <div>
+      <label>Aislamiento: </label> {{cama.aislamiento}}
+    </div>
+    <div>
+      <label>Active: </label> {{cama.active}}
+    </div>
+   
+    <span class="button is-small btn-primary" *ngIf='cama.active' (click)='updateActive(false)'>Inactive</span>
+   
+    <span class="button is-small btn-primary" *ngIf='!cama.active' (click)='updateActive(true)'>Active</span>
+   
+    <span class="button is-small btn-danger" (click)='deleteCama()'>Delete</span>
+   
+    <hr />
+  </div>

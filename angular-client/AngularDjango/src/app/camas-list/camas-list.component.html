@@ -1,0 +1,9 @@
+<h1>Camas</h1>
+ 
+<div *ngFor="let cama of camas | async" style="width: 300px;">
+  <cama-details [cama]='cama'></cama-details>
+</div>
+ 
+<div>
+  <button type="button" class="button btn-danger" (click)='deleteCamas()'>Delete All</button>
+</div>
