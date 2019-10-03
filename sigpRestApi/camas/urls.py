@@ -4,5 +4,5 @@ from camas import views
 urlpatterns = [ 
     url(r'^camas/$', views.cama_list),
     url(r'^camas/(?P<pk>[0-9]+)$', views.cama_detail),
-    url(r'^camas/codigo/(?P<age>[0-9]+)/$', views.cama_list_codigo),
+    url(r'^camas/codigo/(?P<codigo>[\w\-]+)/$', views.cama_list_codigo),
 ]

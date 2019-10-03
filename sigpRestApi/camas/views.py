@@ -1,4 +1,3 @@
-# Create your views here.
 from django.shortcuts import render 
 from django.http import HttpResponse
 from django.http.response import JsonResponse
@@ -60,9 +59,9 @@ def cama_detail(request, pk):
 @csrf_exempt
 # cama_list_codigo(): find all cama by ‘codigo(servicio)’
 def cama_list_codigo(request, codigo):
-    cama = Cama.objects.filter(codigo=codigo)
+    camas = Cama.objects.filter(codigo=codigo)
         
     if request.method == 'GET': 
-        cama_serializer = CamaSerializer(camas, many=True)
+        camas_serializer = CamaSerializer(camas, many=True)
         return JsonResponse(camas_serializer.data, safe=False)
         # In order to serialize objects, we must set 'safe=False'
